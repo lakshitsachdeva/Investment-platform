@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestTrack - Smart Investment Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Track, manage, and optimize your investment portfolio with our powerful platform. Get real-time insights and make data-driven decisions.">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/000000/investment.png">
+</head>
+<body class="landing-page">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Invest<span>Track</span></h1>
+            </div>
+            <nav>
+                <!-- This will be populated by app.js based on authentication status -->
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="pages/login.html">Login</a></li>
+                    <li><a href="pages/register.html">Register</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Master Your Financial Future</h1>
+                <p>Track, analyze, and optimize your investments across multiple asset classes. Make data-driven decisions with our powerful investment platform.</p>
+                <div class="hero-cta">
+                    <a href="pages/register.html" class="btn btn-primary btn-large">Start Investing Now</a>
+                    <a href="#demo" class="btn btn-outline btn-large">See How It Works</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <h3>15K+</h3>
+                        <p>Active Investors</p>
+                    </div>
+                    <div class="stat">
+                        <h3>$750M+</h3>
+                        <p>Assets Tracked</p>
+                    </div>
+                    <div class="stat">
+                        <h3>4.8/5</h3>
+                        <p>User Rating</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://via.placeholder.com/600x400" alt="Investment Dashboard Preview">
+                <div class="floating-card card-1">
+                    <i class="fas fa-chart-line"></i>
+                    <p>+23.5% Portfolio Growth</p>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-bell"></i>
+                    <p>Real-time Alerts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need to Invest Smarter</h2>
+                <p>Comprehensive tools for investors of all experience levels</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Portfolio Management</h3>
+                    <p>Track all your investments in one place with real-time updates and performance metrics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Transaction Tracking</h3>
+                    <p>Record and monitor all your investment transactions with detailed history and analytics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Watchlist</h3>
+                    <p>Keep an eye on potential investments before committing with customizable watchlists.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Price Alerts</h3>
+                    <p>Set custom price thresholds and get notified when assets reach your target values.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Investment Goals</h3>
+                    <p>Set financial targets and track your progress with visual goal trackers and projections.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Performance Reports</h3>
+                    <p>Generate comprehensive reports to analyze your investment performance over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Asset Classes Section -->
+    <section class="asset-classes">
+        <div class="container">
+            <div class="section-header">
+                <h2>Manage Multiple Asset Classes</h2>
+                <p>Our platform supports a wide range of investment types</p>
+            </div>
+            <div class="asset-grid">
+                <div class="asset-type">
+                    <i class="fas fa-landmark"></i>
+                    <h3>Stocks</h3>
+                    <p>Track equities from markets worldwide</p>
+                </div>
+                <div class="asset-type">
+                    <i class="fab fa-bitcoin"></i>
+                    <h3>Cryptocurrencies</h3>
+                    <p>Monitor digital assets and tokens</p>
+                </div>
+                <div class="asset-type">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                    <h3>Bonds</h3>
+                    <p>Track fixed-income securities</p>
+                </div>
+                <div class="asset-type">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Mutual Funds</h3>
+                    <p>Monitor professionally managed portfolios</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Getting Started Is Easy</h2>
+                <p>Begin your investment journey in three simple steps</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create Your Account</h3>
+                        <p>Sign up in minutes with just your email and password. No credit card required to get started.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://via.placeholder.com/300x200" alt="Create Account">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Add Your Investments</h3>
+                        <p>Connect your existing investments or start building your portfolio from scratch with our intuitive interface.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://via.placeholder.com/300x200" alt="Add Investments">
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Track & Optimize</h3>
+                        <p>Monitor performance, set goals, and make data-driven investment decisions with our comprehensive dashboard.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="https://via.placeholder.com/300x200" alt="Track and Optimize">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="demo-content">
+                <h2>See InvestTrack in Action</h2>
+                <p>Watch how our platform helps you manage your investments efficiently</p>
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Watch Demo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Users Say</h2>
+                <p>Join thousands of satisfied investors using InvestTrack</p>
+            </div>
+            <div class="testimonial-carousel">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"InvestTrack has completely transformed how I manage my investments. The portfolio tracking and goal setting features are game-changers!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60" alt="Sarah J.">
+                        <div>
+                            <h4>Sarah J.</h4>
+                            <p>Retail Investor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"As a financial advisor, I recommend InvestTrack to all my clients. The comprehensive reporting and alert system are invaluable tools."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60" alt="Michael T.">
+                        <div>
+                            <h4>Michael T.</h4>
+                            <p>Financial Advisor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The ability to track multiple asset classes in one place has simplified my investment strategy. InvestTrack is worth every penny!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60" alt="Elena R.">
+                        <div>
+                            <h4>Elena R.</h4>
+                            <p>Crypto Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>15,000+</h3>
+                    <p>Active Users</p>
+                </div>
+                <div class="stat-item">
+                    <h3>$750M+</h3>
+                    <p>Assets Tracked</p>
+                </div>
+                <div class="stat-item">
+                    <h3>4.8/5</h3>
+                    <p>User Rating</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.9%</h3>
+                    <p>Uptime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Take Control of Your Investments?</h2>
+                <p>Join thousands of investors who are already using InvestTrack to achieve their financial goals.</p>
+                <div class="cta-buttons">
+                    <a href="pages/register.html" class="btn btn-primary btn-large">Get Started for Free</a>
+                    <a href="pages/login.html" class="btn btn-outline btn-large">Login</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about InvestTrack</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my financial data secure?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We use bank-level encryption and security measures to protect your data. We never share your information with third parties without your explicit consent.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do I need to connect my bank accounts?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, connecting bank accounts is optional. You can manually add and track your investments without linking any external accounts.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I track investments from multiple brokerages?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, InvestTrack allows you to aggregate investments from multiple sources, giving you a comprehensive view of your entire portfolio.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is there a mobile app available?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer mobile apps for both iOS and Android platforms, allowing you to track your investments on the go.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Invest<span>Track</span></h3>
+                    <p>Your all-in-one investment management platform. Track, analyze, and optimize your portfolio with ease.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="pages/login.html">Login</a></li>
+                        <li><a href="pages/register.html">Sign Up</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">API Documentation</a></li>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Webinars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 InvestTrack. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/supabase.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script>
+        // Landing page specific JavaScript (that doesn't rely on modules)
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const mainNav = document.querySelector('nav');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    mainNav.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            }
+
+            // FAQ toggles
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                    const icon = question.querySelector('i');
+                    icon.classList.toggle('fa-chevron-down');
+icon.classList.toggle('fa-chevron-up');
+});
+});
+
+        // Testimonial carousel
+        const testimonials = document.querySelectorAll('.testimonial');
+        const dots = document.querySelectorAll('.carousel-dots .dot');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentIndex = 0;
+
+        function showTestimonial(index) {
+            // Hide all testimonials
+            testimonials.forEach(testimonial => {
+                testimonial.style.display = 'none';
+            });
+            
+            // Remove active class from all dots
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show current testimonial and activate current dot
+            testimonials[index].style.display = 'block';
+            dots[index].classList.add('active');
+        }
+
+        // Initialize
+        showTestimonial(currentIndex);
+
+        // Next button
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(currentIndex);
+        });
+
+        // Previous button
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentIndex);
+        });
+
+        // Dot navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                showTestimonial(currentIndex);
+            });
+        });
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(currentIndex);
+        }, 8000);
+
+        // Video placeholder click
+        const videoPlaceholder = document.querySelector('.video-placeholder');
+        if (videoPlaceholder) {
+            videoPlaceholder.addEventListener('click', function() {
+                const videoContainer = document.querySelector('.video-container');
+                videoContainer.innerHTML = `
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
+                    title="InvestTrack Demo" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+                `;
+            });
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    });
+</script>
+</body> 
+</html>

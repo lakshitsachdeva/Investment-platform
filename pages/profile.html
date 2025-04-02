@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Investment Platform</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../js/app.js"></script>
+    <script type="module" src="../js/profile.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>InvestTrack</h1>
+        </div>
+        <nav>
+            <!-- Navigation will be populated by app.js -->
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Profile</h2>
+            <p>Manage your account information</p>
+        </section>
+
+        <div class="profile-grid">
+            <section class="card">
+                <div class="card-header">
+                    <h3>Personal Information</h3>
+                </div>
+                <div class="card-body">
+                    <form id="personal-info-form">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required disabled>
+                            <small>Email cannot be changed</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-header">
+                    <h3>Change Password</h3>
+                </div>
+                <div class="card-body">
+                    <form id="password-form">
+                        <div class="form-group">
+                            <label for="current-password">Current Password</label>
+                            <input type="password" id="current-password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="new-password">New Password</label>
+                            <input type="password" id="new-password" required>
+                            <small>Password must be at least 8 characters long</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm New Password</label>
+                            <input type="password" id="confirm-password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Update Password</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-header">
+                    <h3>Bank Account Details</h3>
+                </div>
+                <div class="card-body">
+                    <form id="bank-form">
+                        <div class="form-group">
+                            <label for="bank-name">Bank Name</label>
+                            <input type="text" id="bank-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="account-number">Account Number</label>
+                            <input type="text" id="account-number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="ifsc-code">IFSC Code</label>
+                            <input type="text" id="ifsc-code" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Bank Details</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="card-header">
+                    <h3>Account Settings</h3>
+                </div>
+                <div class="card-body">
+                    <div class="settings-group">
+                        <h4>Notifications</h4>
+                        <div class="setting-item">
+                            <label class="switch">
+                                <input type="checkbox" id="email-alerts">
+                                <span class="slider"></span>
+                            </label>
+                            <span>Email Alerts</span>
+                        </div>
+                        <div class="setting-item">
+                            <label class="switch">
+                                <input type="checkbox" id="price-notifications">
+                                <span class="slider"></span>
+                            </label>
+                            <span>Price Change Notifications</span>
+                        </div>
+                        <div class="setting-item">
+                            <label class="switch">
+                                <input type="checkbox" id="news-updates">
+                                <span class="slider"></span>
+                            </label>
+                            <span>Market News Updates</span>
+                        </div>
+                    </div>
+                    <div class="danger-zone">
+                        <h4>Danger Zone</h4>
+                        <button type="button" id="delete-account" class="btn btn-danger">Delete Account</button>
+                        <p class="text-muted">This action cannot be undone.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 InvestTrack. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="confirm-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Confirm Account Deletion</h4>
+                <span class="close-modal">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to delete your account? This action cannot be undone and you will lose all your data.</p>
+                <div class="form-group">
+                    <label for="confirm-delete">Type "DELETE" to confirm</label>
+                    <input type="text" id="confirm-delete" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary close-btn">Cancel</button>
+                <button type="button" id="confirm-delete-btn" class="btn btn-danger">Delete Account</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

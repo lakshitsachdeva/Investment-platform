@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Investment Platform</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../js/supabase.js" defer></script>
+  <script src="../js/portfolio.js" defer></script>
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="logo">InvestTracker</div>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="transactions.html">Transactions</a></li>
+          <li><a href="watchlist.html">Watchlist</a></li>
+        </ul>
+      </nav>
+      <div class="user-menu">
+        <span id="user-name"></span>
+        <button id="logout-btn" class="btn btn-outline">Logout</button>
+      </div>
+    </header>
+    
+    <main class="main-content">
+      <div class="page-header">
+        <h1>My Portfolios</h1>
+        <button id="create-portfolio-btn" class="btn btn-primary">Create New Portfolio</button>
+      </div>
+      
+      <div class="portfolios-container" id="portfolios-list">
+        <p>Loading portfolios...</p>
+      </div>
+      
+      <!-- Create Portfolio Modal -->
+      <div id="portfolio-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Create New Portfolio</h2>
+            <span class="close-modal">&times;</span>
+          </div>
+          <div class="modal-body">
+            <form id="portfolio-form">
+              <div class="form-group">
+                <label for="portfolio-name">Portfolio Name</label>
+                <input type="text" id="portfolio-name" required>
+              </div>
+              <div class="form-group">
+                <label for="portfolio-description">Description (Optional)</label>
+                <textarea id="portfolio-description"></textarea>
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Create Portfolio</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <footer class="footer">
+      <p>&copy; 2025 InvestTracker - College Project</p>
+    </footer>
+  </div>
+</body>
+</html>

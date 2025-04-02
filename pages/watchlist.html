@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist | Investment Platform</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../js/app.js"></script>
+    <script type="module" src="../js/watchlist.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>InvestTrack</h1>
+        </div>
+        <nav>
+            <!-- Navigation will be populated by app.js -->
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Watchlist</h2>
+            <p>Track assets you're interested in</p>
+        </section>
+
+        <section class="card">
+            <div class="card-header">
+                <h3>Add to Watchlist</h3>
+            </div>
+            <div class="card-body">
+                <form id="watchlist-form">
+                    <div class="form-row">
+                        <div class="form-group flex-grow">
+                            <label for="asset-select">Asset</label>
+                            <select id="asset-select" required>
+                                <option value="">Select Asset</option>
+                                <!-- Will be populated dynamically -->
+                            </select>
+                        </div>
+                        <div class="form-group form-submit">
+                            <button type="submit" class="btn btn-primary">Add to Watchlist</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="card-header">
+                <h3>Set Price Alerts</h3>
+            </div>
+            <div class="card-body">
+                <form id="alert-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="alert-asset">Asset</label>
+                            <select id="alert-asset" required>
+                                <option value="">Select Asset</option>
+                                <!-- Will be populated dynamically -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="threshold-price">Threshold Price</label>
+                            <input type="number" id="threshold-price" step="0.01" min="0.01" required>
+                        </div>
+                        <div class="form-group form-submit">
+                            <button type="submit" class="btn btn-primary">Set Alert</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="card-header">
+                <h3>Your Watchlist</h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="watchlist-table" class="table">
+                        <thead>
+                            <tr>
+                                <th>Asset</th>
+                                <th>Symbol</th>
+                                <th>Current Price</th>
+                                <th>24h Change</th>
+                                <th>Added On</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="watchlist-body">
+                            <!-- Will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="card-header">
+                <h3>Your Price Alerts</h3>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table id="alerts-table" class="table">
+                        <thead>
+                            <tr>
+                                <th>Asset</th>
+                                <th>Symbol</th>
+                                <th>Current Price</th>
+                                <th>Alert Price</th>
+                                <th>Created On</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="alerts-body">
+                            <!-- Will be populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 InvestTrack. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Will be moved to watchlist.js once created
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Initialization code for the watchlist page will go here
+        });
+    </script>
+</body>
+</html>
