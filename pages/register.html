@@ -3,19 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Register - Investment Platform</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Register - Investment Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Supabase JS from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="../js/supabase.js" defer></script>
-  <script src="../js/auth.js" defer></script>
+  <script>
+    // Initialize Supabase client with environment variables
+    const supabaseUrl = 'https://nnxwuurlwhyalpogqgfs.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ueHd1dXJsd2h5YWxwb2dxZ2ZzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMwODg5MTUsImV4cCI6MjA1ODY2NDkxNX0.qRlqZ3TBRyYKA6ZqH5tjKEH-VMaMIT16Zve3BKvf8j0';
+    window.supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
+  </script>
 </head>
 <body>
-  <div class="auth-container">
-    <div class="auth-card">
-      <h1>Register</h1>
+  <header>
+    <h1>Investment Tracker</h1>
+    <nav>
+      <!-- Navigation will be populated by JavaScript -->
+    </nav>
+  </header>
+  
+  <main>
+    <div class="auth-container">
+      <h2>Register</h2>
       <form id="register-form">
         <div class="form-group">
-          <label for="name">Full Name</label>
+          <label for="name">Name</label>
           <input type="text" id="name" required>
         </div>
         <div class="form-group">
@@ -33,12 +45,17 @@
         <div id="error-message" class="error-message"></div>
         <button type="submit" class="btn btn-primary">Register</button>
       </form>
-      <div class="auth-links">
-        <a href="login.html">Already have an account? Login</a>
-      </div>
+      <p>Already have an account? <a href="login.html">Login</a></p>
     </div>
-  </div>
-  <script src="js/darkMode.js"></script>
-
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Investment Tracker</p>
+  </footer>
+  
+  <!-- Include your JavaScript files -->
+  <script src="auth.js"></script>
+  <script src="darkMode.js"></script>
 </body>
 </html>
+

@@ -3,71 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Investment Platform</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Portfolios - Investment Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Supabase JS from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="../js/supabase.js" defer></script>
-  <script src="../js/portfolio.js" defer></script>
+  <script>
+    // Initialize Supabase client with environment variables
+    const supabaseUrl = 'https://nnxwuurlwhyalpogqgfs.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ueHd1dXJsd2h5YWxwb2dxZ2ZzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMwODg5MTUsImV4cCI6MjA1ODY2NDkxNX0.qRlqZ3TBRyYKA6ZqH5tjKEH-VMaMIT16Zve3BKvf8j0';
+    window.supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
+  </script>
 </head>
 <body>
-  <div class="app-container">
-    <header class="header">
-      <div class="logo">InvestTracker</div>
-      <nav>
-        <ul>
-          <li><a href="dashboard.html">Dashboard</a></li>
-          <li><a href="portfolio.html" class="active">Portfolio</a></li>
-          <li><a href="transactions.html">Transactions</a></li>
-          <li><a href="watchlist.html">Watchlist</a></li>
-        </ul>
-      </nav>
-      <div class="user-menu">
-        <span id="user-name"></span>
-        <button id="logout-btn" class="btn btn-outline">Logout</button>
-      </div>
-    </header>
+  <header>
+    <h1>Investment Tracker</h1>
+    <div class="user-info">
+      Welcome, <span id="user-name">User</span>
+    </div>
+    <nav>
+      <!-- Navigation will be populated by JavaScript -->
+    </nav>
+  </header>
+  
+  <main>
+    <h2>Portfolios</h2>
     
-    <main class="main-content">
-      <div class="page-header">
-        <h1>My Portfolios</h1>
-        <button id="create-portfolio-btn" class="btn btn-primary">Create New Portfolio</button>
-      </div>
-      
-      <div class="portfolios-container" id="portfolios-list">
-        <p>Loading portfolios...</p>
-      </div>
-      
-      <!-- Create Portfolio Modal -->
-      <div id="portfolio-modal" class="modal">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h2>Create New Portfolio</h2>
-            <span class="close-modal">&times;</span>
-          </div>
-          <div class="modal-body">
-            <form id="portfolio-form">
-              <div class="form-group">
-                <label for="portfolio-name">Portfolio Name</label>
-                <input type="text" id="portfolio-name" required>
-              </div>
-              <div class="form-group">
-                <label for="portfolio-description">Description (Optional)</label>
-                <textarea id="portfolio-description"></textarea>
-              </div>
-              <div class="form-actions">
-                <button type="submit" class="btn btn-primary">Create Portfolio</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </main>
+    <div class="portfolio-actions">
+      <button id="create-portfolio-btn" class="btn btn-primary">Create New Portfolio</button>
+    </div>
     
-    <footer class="footer">
-      <p>&copy; 2025 InvestTracker - College Project</p>
-    </footer>
-  </div>
-  <script src="js/darkMode.js"></script>
-
+    <section id="portfolios-list" class="portfolios-grid">
+      <!-- Portfolios will be populated by JavaScript -->
+      <div class="loading">Loading portfolios...</div>
+    </section>
+    
+    <!-- Portfolio Modal -->
+    <div id="portfolio-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h3>Create New Portfolio</h3>
+        <form id="portfolio-form">
+          <div class="form-group">
+            <label for="portfolio-name">Portfolio Name</label>
+            <input type="text" id="portfolio-name" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Create Portfolio</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Investment Tracker</p>
+  </footer>
+  
+  <!-- Include your JavaScript files -->
+  <script src="app.js"></script>
+  <script src="portfolio.js"></script>
+  <script src="darkMode.js"></script>
 </body>
 </html>
+

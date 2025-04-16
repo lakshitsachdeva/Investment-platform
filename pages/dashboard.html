@@ -3,105 +3,94 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - Investment Platform</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <title>Dashboard - Investment Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Supabase JS from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="../js/supabase.js" defer></script>
-  <script src="../js/dashboard.js" defer></script>
+  <script>
+    // Initialize Supabase client with environment variables
+    const supabaseUrl = 'https://nnxwuurlwhyalpogqgfs.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ueHd1dXJsd2h5YWxwb2dxZ2ZzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDMwODg5MTUsImV4cCI6MjA1ODY2NDkxNX0.qRlqZ3TBRyYKA6ZqH5tjKEH-VMaMIT16Zve3BKvf8j0';
+    window.supabase = supabaseClient.createClient(supabaseUrl, supabaseKey);
+  </script>
 </head>
 <body>
-  <div class="app-container">
-    <header class="header">
-      <div class="logo">InvestTracker</div>
-      <nav>
-        <ul>
-          <li><a href="dashboard.html" class="active">Dashboard</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="transactions.html">Transactions</a></li>
-          <li><a href="watchlist.html">Watchlist</a></li>
-        </ul>
-      </nav>
-      <div class="user-menu">
-        <span id="user-name"></span>
-        <button id="logout-btn" class="btn btn-outline">Logout</button>
-      </div>
-    </header>
+  <header>
+    <h1>Investment Tracker</h1>
+    <div class="user-info">
+      Welcome, <span id="user-name">User</span>
+    </div>
+    <nav>
+      <!-- Navigation will be populated by JavaScript -->
+    </nav>
+  </header>
+  
+  <main>
+    <h2>Dashboard</h2>
     
-    <main class="main-content">
-      <h1>Dashboard</h1>
+    <section class="dashboard-summary">
+      <div class="card">
+        <h3>Portfolio Summary</h3>
+        <div id="portfolio-summary">
+          <!-- Portfolio summary will be populated by JavaScript -->
+          <p>Loading portfolio data...</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="dashboard-details">
+      <div class="card">
+        <h3>Recent Transactions</h3>
+        <table id="recent-transactions">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Asset</th>
+              <th>Type</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Transactions will be populated by JavaScript -->
+            <tr>
+              <td colspan="5">Loading transactions...</td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="transactions.html" class="btn btn-sm">View All Transactions</a>
+      </div>
       
-      <div class="dashboard-grid">
-        <!-- Portfolio Summary -->
-        <div class="card">
-          <div class="card-header">
-            <h2>Portfolio Summary</h2>
-          </div>
-          <div class="card-body" id="portfolio-summary">
-            <p>Loading portfolio data...</p>
-          </div>
-        </div>
-        
-        <!-- Recent Transactions -->
-        <div class="card">
-          <div class="card-header">
-            <h2>Recent Transactions</h2>
-          </div>
-          <div class="card-body">
-            <table id="recent-transactions">
-              <thead>
-                <tr>
-                  <th>Date</th>
-                  <th>Asset</th>
-                  <th>Type</th>
-                  <th>Quantity</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td colspan="5">Loading transactions...</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="card-footer">
-            <a href="transactions.html">View All Transactions</a>
-          </div>
-        </div>
-        
-        <!-- Watchlist -->
-        <div class="card">
-          <div class="card-header">
-            <h2>Watchlist</h2>
-          </div>
-          <div class="card-body">
-            <table id="watchlist-items">
-              <thead>
-                <tr>
-                  <th>Asset</th>
-                  <th>Symbol</th>
-                  <th>Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td colspan="3">Loading watchlist...</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="card-footer">
-            <a href="watchlist.html">View Full Watchlist</a>
-          </div>
-        </div>
+      <div class="card">
+        <h3>Watchlist</h3>
+        <table id="watchlist-items">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Symbol</th>
+              <th>Current Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Watchlist items will be populated by JavaScript -->
+            <tr>
+              <td colspan="3">Loading watchlist...</td>
+            </tr>
+          </tbody>
+        </table>
+        <a href="watchlist.html" class="btn btn-sm">View Watchlist</a>
       </div>
-    </main>
-    
-    <footer class="footer">
-      <p>&copy; 2025 InvestTracker - College Project</p>
-    </footer>
-  </div>
-  <script src="js/darkMode.js"></script>
-
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Investment Tracker</p>
+  </footer>
+  
+  <!-- Include your JavaScript files -->
+  <script src="app.js"></script>
+  <script src="dashboard.js"></script>
+  <script src="darkMode.js"></script>
 </body>
-</html> 
+</html>
+
